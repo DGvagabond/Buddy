@@ -64,14 +64,14 @@ namespace Buddy
         {
             EventHandlers = new EventHandlers();
             Exiled.Events.Handlers.Server.RoundStarted += EventHandlers.OnRoundStart;
-            Exiled.Events.Handlers.Player.Joined += EventHandlers.OnPlayerJoin;
+            Exiled.Events.Handlers.Player.Verified += EventHandlers.OnPlayerJoin;
             Exiled.Events.Handlers.Server.RestartingRound += EventHandlers.OnRoundRestart;
             Exiled.Events.Handlers.Server.ReloadedConfigs += Config.OnReload;
         }
         private void UnregisterEvents()
         {
             Exiled.Events.Handlers.Server.RoundStarted -= EventHandlers.OnRoundStart;
-            Exiled.Events.Handlers.Player.Joined -= EventHandlers.OnPlayerJoin;
+            Exiled.Events.Handlers.Player.Verified -= EventHandlers.OnPlayerJoin;
             Exiled.Events.Handlers.Server.RestartingRound -= EventHandlers.OnRoundRestart;
             Exiled.Events.Handlers.Server.ReloadedConfigs -= Config.OnReload;
             
