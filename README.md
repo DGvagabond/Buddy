@@ -1,8 +1,13 @@
+<a href="https://discord.gg/BvKsvS7"><img src="https://img.shields.io/discord/451599029499985920?color=%234e7bd8&label=Discord" alt="Pixel's Community"></a>
+<a href="https://github.com/DGvagabond/Buddy/releases"><img src="https://img.shields.io/github/v/release/DGvagabond/Buddy?include_prereleases&label=Release" alt="Releases"></a>
+<a href="https://github.com/DGvagabond/Buddy/releases"><img src="https://img.shields.io/github/downloads/DGvagabond/Buddy/total?label=Downloads" alt="Downloads"></a>
+<a href="https://discord.gg/PyUkWTg"><img src="https://img.shields.io/discord/656673194693885975?color=%23aa0000&label=EXILED" alt="Support"></a>
+<a href="https://github.com/DGvagabond/Buddy"><img src="https://img.shields.io/github/license/DGvagabond/Buddy?color=lightgrey&label=License" alt="License"></a>
 # Buddy
 Buddy lets you pair up with another player before the round begins, and spawn in on the same team as them. This can let friends play together more easily.
 
 ## Installation
-To install Buddy, just download the latest release at https://github.com/PintTheDragon/Buddy/releases (make sure to get the EXILED version, not the SMOD version), then stick Buddy.dll in your EXILED Plugins folder directory. After you launch your server, you can configure it.
+To install Buddy, just download the latest release at https://github.com/DGvagabond/Buddy/releases (make sure to get the EXILED version, not the SMOD version), then stick Buddy.dll in your EXILED Plugins folder directory. After you launch your server, you can configure it.
 
 ## Configuration
 For the most part, Buddy works out of the box, but you may want to configure it.
