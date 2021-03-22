@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using CommandSystem;
 using Exiled.API.Features;
 using RemoteAdmin;
@@ -9,7 +8,7 @@ namespace Buddy
     [CommandHandler(typeof(ClientCommandHandler))]
     class UnBuddyCommand : ICommand
     {
-        public string Command => Buddy.singleton.Config.GetLang("buddyUnbuddyCommand");
+        public string Command => Buddy.Singleton.Config.GetLang("buddyUnbuddyCommand");
 
         public string[] Aliases => null;
 
@@ -18,12 +17,9 @@ namespace Buddy
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
             response = "";
-            if (sender is PlayerCommandSender)
-            {
-                Player player = Player.Get(((CommandSender)sender).SenderId);
-                response = HandleUnBuddyCommand(player);
-                return true;
-            }
+            if (!(sender is PlayerCommandSender)) return true;
+            var player = Player.Get(((CommandSender)sender).SenderId);
+            response = HandleUnBuddyCommand(player);
             return true;
         }
 
@@ -31,18 +27,18 @@ namespace Buddy
         {
             try
             {
-                if (Buddy.singleton.buddies.ContainsKey(p.UserId))
+                if (Buddy.Singleton.Buddies.ContainsKey(p.UserId))
                 {
-                    Buddy.singleton.buddies.Remove(p.UserId);
-                    Buddy.singleton.RemovePerson(p.UserId);
+                    Buddy.Singleton.Buddies.Remove(p.UserId);
+                    Buddy.Singleton.RemovePerson(p.UserId);
                 }
             }
             catch (ArgumentNullException e)
             {
                 Log.Error(e);
-                return Buddy.singleton.Config.GetLang("errorMessage");
+                return Buddy.Singleton.Config.GetLang("errorMessage");
             }
-            return Buddy.singleton.Config.GetLang("unBuddySuccess");
+            return Buddy.Singleton.Config.GetLang("unBuddySuccess");
         }
     }
 }
