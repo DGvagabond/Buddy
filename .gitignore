@@ -3,3 +3,8 @@ src/bin
 src/obj
 .vs
 packages
+*.xml
+*.iml
+.idea/.idea.BuddyPlugin/.idea/.name
+BuddyPlugin.sln.DotSettings.user
+*.xml
